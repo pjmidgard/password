@@ -256,6 +256,9 @@ class password_class:
                              
                                 jl=binascii.unhexlify(qqwslenf % n)
                                 
+                                import paq
+                                jl= paq.compress(jl)
+                                
                                 
                                     
                                 size_after=len(jl)
@@ -371,6 +374,8 @@ class password_class:
                        # Read the whole file at once
                         
                         data = binary_file.read()
+                        import paq
+                        data= paq.compress(data)
 
                         
 
