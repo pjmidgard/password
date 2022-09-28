@@ -241,13 +241,29 @@ class password_class:
                                     
 
                                 password=N
-                                   
+                                
+                                size_data12=password
 
-                                
+                                size_data12="1"+size_data12
+                            
+                                lenf=len(size_data12)
+                                        
+                                add_bits118=""
+                                count_bits=8-lenf%8
+                                z=0
+                                    
+                                if count_bits!=8:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                                    
+                                                                    
+                                size_data12=add_bits118+size_data12
                                 
                                 
                                     
-                                    
+                                size_data11=password 
+                                  
                                 size_data11=password+size_data3
              
                                                                                 
@@ -464,6 +480,25 @@ class password_class:
                                     
 
                                     size_data3=size_data2
+                                    
+                                    if size_data3[0:9]=="000000001":
+                                        size_data3=size_data3[9:]
+                                    elif size_data3[0:8]=="00000001":
+                                        size_data3=size_data3[8:]
+                                    elif size_data3[0:7]=="0000001":
+                                        size_data3=size_data3[7:]
+                                    elif size_data3[0:6]=="000001":
+                                        size_data3=size_data3[6:]
+                                    elif size_data3[0:5]=="00001":
+                                        size_data3=size_data3[5:]
+                                    elif size_data3[0:4]=="0001":
+                                        size_data3=size_data3[4:]
+                                    elif size_data3[0:3]=="001":
+                                        size_data3=[3:]
+                                    elif size_data3[0:2]=="01":
+                                        size_data3=size_data3[2:]
+                                    elif size_data3[0:1]=="1":
+                                        size_data3=size_data3[1:]                                    
                                     
                                     import getpass
 
