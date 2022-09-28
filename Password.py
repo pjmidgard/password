@@ -229,10 +229,15 @@ class password_class:
 
                                 password=res  
                                 N=int(password,2)
-                                N=format(N,'0240b')
-                                if len(N)>240:
-                                    print("Sorry this password too long!")
-                                    raise SystemExit 
+                                
+                                long=len(password)
+                                long_N=str(long*8)
+                                
+                                long_count="0"+long_N+"b"
+                               
+                                
+                                N=format(N,long_count)
+                          
                                     
 
                                 password=N
@@ -464,7 +469,7 @@ class password_class:
 
                                     password=getpass.getpass()
                                     
-                                    password1=size_data3[:240]
+                                    
                                     
                                     string = password
 
@@ -498,15 +503,19 @@ class password_class:
 
                                     password=res   
                                     
-                                    
+                                    long=len(password)
+                                    long_eight=long*8
+                                    long_N=str(long*8)
+                                    long_count="0"+long_N+"b"
                                 
                                     N=int(password,2)
-                                    N=format(N,'0240b')
+                                    N=format(N,long_count)
 
-                                    password=N    
+                                    password=N
+                                    password1=size_data3[:long_eight] 
                                     
                                     if  password==password1:
-                                        size_data3=size_data3[240:]
+                                        size_data3=size_data3[long_eight:]
                                         print("Password it's right!")
                                         
                                       
