@@ -98,8 +98,7 @@ class password_class:
 
                        # Read the whole file at once
                         data = binary_file.read()
-                        #import paq
-                        #data=paq.compress(data)
+                        
                 
                         size_after2=len(data)
                         #print(size_after2)  
@@ -375,7 +374,7 @@ class password_class:
                         
                         data = binary_file.read()
                         import paq
-                        data= paq.compress(data)
+                        data= paq.decompress(data)
 
                         
 
