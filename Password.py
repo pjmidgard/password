@@ -231,8 +231,13 @@ class password_class:
                                 password=res  
                                 N=int(password,2)
                                 N=format(N,'0240b')
+                                if len(N)>240:
+                                    print("Sorry this password too long!")
+                                    raise SystemExit 
+                                    
 
-                                password=N    
+                                password=N
+                                   
 
                                 
                                 
