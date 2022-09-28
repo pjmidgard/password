@@ -251,7 +251,7 @@ class password_class:
                                 N=int(password,2)
                                 
                                 long=len(password)
-                                print(long)
+                                #print(long)
                                 long_N=str(long)
                                 
                                 long_count="0"+long_N+"b"
