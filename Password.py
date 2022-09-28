@@ -197,15 +197,49 @@ class password_class:
                                 
                                 password=getpass.getpass()
                                 
-                                string_char=""
 
-                                string_char=strToBinary(password)
+                                string = password
+
+                                lower="abcdefghijklmopqrstuvwxyz"
+
+                                upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                                res=""
+
+                                for i in range(0,len(string)):
+
+                                    if(i%2==0):
+
+                                        if(string[i] in lower):
+
+                                            res+="1"*(lower.index(string[i])+1)
+
+                                        else:
+
+                                            res+="1"*(upper.index(string[i])+1)
+
+                                    else:
+
+                                        if(string[i] in lower):
+
+                                            res+="0"*(lower.index(string[i])+1)
+
+                                        else:
+
+                                            res+="0"*(upper.index(string[i])+1)
+
+                                password=res  
+                                N=int(password,2)
+                                N=format(N,'0240b')
+
+                                password=N    
+
                                 
-                                size_data11=string_char+size_data3
+                                
                                 
                                     
                                     
-                                size_data11=size_data11
+                                size_data11=password+size_data3
              
                                                                                 
                                 n = int(size_data11, 2)
@@ -416,16 +450,55 @@ class password_class:
                                     
 
                                     size_data3=size_data2
+                                    
                                     import getpass
 
                                     password=getpass.getpass()
                                     
-                                
-                                    string_char=""
+                                    password1=size_data3[:240]
+                                    
+                                    string = password
 
-                                    string_char=strToBinary(password)
-                                    password_long=len(password)
-                                    size_data3=size_data3[password_long*8:]
+                                    lower="abcdefghijklmopqrstuvwxyz"
+
+                                    upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                                    res=""
+
+                                    for i in range(0,len(string)):
+
+                                        if(i%2==0):
+
+                                            if(string[i] in lower):
+
+                                                res+="1"*(lower.index(string[i])+1)
+
+                                            else:
+
+                                                res+="1"*(upper.index(string[i])+1)
+
+                                        else:
+
+                                            if(string[i] in lower):
+
+                                               res+="0"*(lower.index(string[i])+1)
+
+                                            else:
+
+                                               res+="0"*(upper.index(string[i])+1)
+
+                                    password=res   
+                                    
+                                    
+                                
+                                    N=int(password,2)
+                                    N=format(N,'0240b')
+
+                                    password=N    
+                                    
+                                    if  password==password1:
+                                        size_data3=size_data3[240:]
+                                        print("Password it's right!")
                                         
                                       
                                     n = int(size_data3, 2)
