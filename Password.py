@@ -494,7 +494,7 @@ class password_class:
                                     elif size_data3[0:4]=="0001":
                                         size_data3=size_data3[4:]
                                     elif size_data3[0:3]=="001":
-                                        size_data3=[3:]
+                                        size_data3=size_data3[3:]
                                     elif size_data3[0:2]=="01":
                                         size_data3=size_data3[2:]
                                     elif size_data3[0:1]=="1":
