@@ -231,7 +231,7 @@ class password_class:
                                 N=int(password,2)
                                 
                                 long=len(password)
-                                long_N=str(long*8)
+                                long_N=str(long)
                                 
                                 long_count="0"+long_N+"b"
                                
@@ -252,8 +252,8 @@ class password_class:
                                 count_bits=8-lenf%8
                                 z=0
                                     
-                                if count_bits!=8:
-                                                while z<count_bits:
+                              
+                                while z<count_bits:
                                                     add_bits118="0"+add_bits118
                                                     z=z+1
                                                                     
@@ -262,9 +262,9 @@ class password_class:
                                 
                                 
                                     
-                                size_data11=password 
+                                size_data11=size_data12 
                                   
-                                size_data11=password+size_data3
+                                size_data11=size_data11+size_data3
              
                                                                                 
                                 n = int(size_data11, 2)
@@ -536,11 +536,14 @@ class password_class:
 
                                                res+="0"*(upper.index(string[i])+1)
 
-                                    password=res   
+                                    password=res
+                                    
+                                    
+                                       
                                     
                                     long=len(password)
-                                    long_eight=long*8
-                                    long_N=str(long*8)
+                                    long_eight=long
+                                    long_N=str(long)
                                     long_count="0"+long_N+"b"
                                 
                                     N=int(password,2)
