@@ -4,7 +4,7 @@ import os
 import binascii
 self="'"
 
-namez = input("for password for incrypt file p1 or p2 insert password from file ")
+namez = input("for password for encrypt file p1 or p2 insert password from file ")
 #@Author Jurijus pacalovas
 class password_class:
 
