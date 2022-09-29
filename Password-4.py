@@ -9,8 +9,20 @@ namez = input("for password for encrypt file p1 or p2 insert password from file 
 class password_class:
 
     def password1(self):
-
+                def strToBinary(s):
+                    bin_conv = []
                  
+                    for c in s:
+                         
+                        # convert each char to
+                        # ASCII value
+                        ascii_val = ord(c)
+                         
+                        # Convert ASCII value to binary
+                        binary_val = bin(ascii_val)
+                        bin_conv.append(binary_val[2:])
+                     
+                        return (' '.join(bin_conv))    
                 
                 self.name = "Author: Jurijus Pacalovas"
 
@@ -251,38 +263,9 @@ class password_class:
                                     N = len(S)
                                  
                                     # Function Call
-                                    password=encryptString(S, N)
+                                    s=encryptString(S, N)
                                 
-                                string = password
-                                lower="abcdefghijklmopqrstuvwxyz0123456789"
-
-                                upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-                                res=""
-
-                                for i in range(0,len(string)):
-
-                                    if(i%2==0):
-
-                                        if(string[i] in lower):
-
-                                            res+="1"*(lower.index(string[i])+1)
-
-                                        else:
-
-                                            res+="1"*(upper.index(string[i])+1)
-
-                                    else:
-
-                                        if(string[i] in lower):
-
-                                            res+="0"*(lower.index(string[i])+1)
-
-                                        else:
-
-                                            res+="0"*(upper.index(string[i])+1)
-
-                                password=res                                
+                                password=strToBinary(s)
  
 # This code is contributed by mohit kumar  
                                 #print(password)
@@ -360,7 +343,21 @@ class password_class:
 
     def password2(self):
 
+                 def strToBinary(s):
+                    bin_conv = []
                  
+                    for c in s:
+                         
+                        # convert each char to
+                        # ASCII value
+                        ascii_val = ord(c)
+                         
+                        # Convert ASCII value to binary
+                        binary_val = bin(ascii_val)
+                        bin_conv.append(binary_val[2:])
+                     
+                        return (' '.join(bin_conv))   
+                                         
                  if namez=="p2":
                     
                     name = input("What is name of file? ")
@@ -540,6 +537,12 @@ class password_class:
                                     
                                                 
                                                                     
+
+                                    
+                                         
+                                 
+                                # This code is contributed by mohit kumar 
+                                    
                                     # Python3 program for the above approach
                                      
                                     # Function to convert Decimal to Hex
@@ -607,43 +610,8 @@ class password_class:
                                         N = len(S)
                                      
                                         # Function Call
-                                        password=encryptString(S, N)
-                                    
-                                        string = password
-                                lower="abcdefghijklmopqrstuvwxyz0123456789"
-
-                                upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-                                res=""
-
-                                for i in range(0,len(string)):
-
-                                    if(i%2==0):
-
-                                        if(string[i] in lower):
-
-                                            res+="1"*(lower.index(string[i])+1)
-
-                                        else:
-
-                                            res+="1"*(upper.index(string[i])+1)
-
-                                    else:
-
-                                        if(string[i] in lower):
-
-                                            res+="0"*(lower.index(string[i])+1)
-
-                                        else:
-
-                                            res+="0"*(upper.index(string[i])+1)
-
-                                    password=res                                             
-                                 
-                                # This code is contributed by mohit kumar 
-                                    
-                                       
-                                    
+                                        s=encryptString(S, N)                                       
+                                    password=strToBinary(s)
                                     long=len(password)
                                     long_eight=long
                                     long_N=str(long)
