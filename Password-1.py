@@ -10,20 +10,7 @@ class password_class:
 
     def password1(self):
 
-                def strToBinary(s):
-                    bin_conv = []
                  
-                    for c in s:
-                         
-                        # convert each char to
-                        # ASCII value
-                        ascii_val = ord(c)
-                         
-                        # Convert ASCII value to binary
-                        binary_val = bin(ascii_val)
-                        bin_conv.append(binary_val[2:])
-                     
-                        return (' '.join(bin_conv))       
                 
                 self.name = "Author: Jurijus Pacalovas"
 
@@ -302,20 +289,7 @@ class password_class:
 
     def password2(self):
 
-                 def strToBinary(s):
-                        bin_conv = []
-                     
-                        for c in s:
-                             
-                            # convert each char to
-                            # ASCII value
-                            ascii_val = ord(c)
-                             
-                            # Convert ASCII value to binary
-                            binary_val = bin(ascii_val)
-                            bin_conv.append(binary_val[2:])
-                             
-                            return (' '.join(bin_conv))
+                 
                  if namez=="p2":
                     
                     name = input("What is name of file? ")
@@ -352,17 +326,6 @@ class password_class:
                     
                     long=len(nameas)
 
-                    
-                    
-                    
-                    
-                    Deep_long=240
-                    Deep_long_All=Deep_long*16
-                    block_size_long=16
-                    Times_compression=1
-                    	
-                    
-                    
                     nac=len(nameas)
                    
                     countraz=0
