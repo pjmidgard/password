@@ -252,8 +252,8 @@ class password_class:
                                 count_bits=8-lenf%8
                                 z=0
                                     
-                              
-                                while z<count_bits:
+                                if count_bits!=8:
+                                    while z<count_bits:
                                                     add_bits118="0"+add_bits118
                                                     z=z+1
                                                                     
