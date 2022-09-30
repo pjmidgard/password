@@ -632,9 +632,11 @@ class password_class:
                                             print("Password it's right!")
                                         else:
                                             print("Password it's incorrect!")
+                                            raise SystemExit
                                             
                                     else:
                                         print("Password it's incorrect!")
+                                        raise SystemExit
                                         
                                     n = int(size_data3, 2)
                                     
