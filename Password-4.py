@@ -625,9 +625,17 @@ class password_class:
                                     
                                     if  password==password1:
                                         size_data3=size_data3[long_eight:]
-                                        print("Password it's right!")
                                         
-                                      
+                                        long_file=len(size_data3)
+                                        divide=long_file%8
+                                        if divide==0:
+                                            print("Password it's right!")
+                                        else:
+                                            print("Password it's incorrect!")
+                                            
+                                    else:
+                                        print("Password it's incorrect!")
+                                        
                                     n = int(size_data3, 2)
                                     
                                     
